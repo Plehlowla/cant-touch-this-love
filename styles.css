@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* .love {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    padding: 10px;
+    background-color: lightcoral;
+    width: fit-content;
+    height: 90px;
+} */
+#love {
+    position: absolute; 
+    width: 100px; 
+    height: 90px; 
+    background-color: transparent;
+    border: none;
+}
+#love::before, #love::after{
+    position: absolute;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: lightcoral;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#love::after{
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
